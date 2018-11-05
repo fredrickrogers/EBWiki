@@ -6,16 +6,16 @@ RSpec.describe 'maps/index.html.erb', type: :view do
   it 'displays all the articles' do
     case1 = FactoryBot.create(:case, title: 'John Doe')
     case2 = FactoryBot.create(:case,
-                                 title: 'Jimmy Doe',
-                                 state: State.where(ansi_code: 'NY').first)
+                              title: 'Jimmy Doe',
+                              state: State.where(ansi_code: 'NY').first)
     assign(:cases, Kaminari.paginate_array(
         Case.pluck(:id,
-                    :latitude,
-                    :longitude,
-                    :avatar,
-                    :title,
-                    :overview)
-    ).page(1))
+                   :latitude,
+                   :longitude,
+                   :avatar,
+                   :title,
+                   :overview)
+      ).page(1))
     render
 
     expect(rendered).to match(/John Doe/m)

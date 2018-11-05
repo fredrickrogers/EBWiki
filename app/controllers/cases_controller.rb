@@ -114,7 +114,7 @@ class CasesController < ApplicationController
       end
       flash[:success] = 'Undid that!'
       flash[:undo] = @this_case.versions
-    rescue
+    rescue StandardError
       flash[:alert] = 'Failed undoing the action...'
     ensure
       redirect_to root_path

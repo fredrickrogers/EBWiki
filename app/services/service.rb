@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This service is used for adding users to Mailchimp
 module Service
   extend ActiveSupport::Concern
 

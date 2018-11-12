@@ -35,14 +35,11 @@ RSpec.describe Visit, type: :model do
     end
 
     it 'returns visits sorted by landing page' do
-      visit_one = FactoryBot.create(:visit,
-                                    landing_page: 'https://blackopswiki.herokuapp.com/about')
-      FactoryBot.create(:visit,
-                        landing_page: 'https://blackopswiki.herokuapp.com/about')
+      FactoryBot.create(:visit, landing_page: 'https://ebwiki.org/about')
+      FactoryBot.create(:visit, landing_page: 'https://ebwiki.org/about')
       FactoryBot.create(:visit)
       FactoryBot.create(:visit)
-      visit_five = FactoryBot.create(:visit,
-                                     landing_page: 'https://blackopswiki.herokuapp.com/analytics/index')
+      visit_five = FactoryBot.create(:visit, landing_page: 'https://ebwiki.org/analytics/index')
 
       visits = Visit.sorted_by_hits 2
       expect(visits.count).to eq(2)

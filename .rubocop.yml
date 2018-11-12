@@ -13,6 +13,7 @@ AllCops:
     - bin/*
     - script/*
     - config/routes.rb
+    - config/initializers/simple_form_bootstrap.rb
 
 Style/Lambda:
   Enabled: false

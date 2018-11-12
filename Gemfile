@@ -87,6 +87,7 @@ group :test do
   gem 'selenium-webdriver', '~> 2.43.0'
   gem 'shoulda-matchers', '~> 3.1.1'
   # Confirmation emails sent after commit
+  gem 'rubocop-rspec'
   gem 'test_after_commit', '~> 1.1'
   gem 'webmock'
 end

@@ -7,7 +7,7 @@ describe Agency do
     let!(:user) { FactoryBot.create(:user) }
     let!(:state) { FactoryBot.create(:state) }
     scenario 'Logged in user with correct agency params' do
-      collection = SortCollectionOrdinally.call(collection: State.all)
+      SortCollectionOrdinally.call(collection: State.all)
       login_as(user, scope: :user)
       visit new_agency_path
       fill_in 'Name', with: 'Test'
@@ -21,7 +21,7 @@ describe Agency do
     end
 
     scenario 'user creates agency with in correct credentials' do
-      collection = SortCollectionOrdinally.call(collection: State.all)
+      SortCollectionOrdinally.call(collection: State.all)
       login_as(user, scope: :user)
       visit new_agency_path
       fill_in 'Name', with: ''

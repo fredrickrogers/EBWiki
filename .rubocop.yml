@@ -23,3 +23,6 @@ Style/UnneededInterpolation:
 
 Layout/FirstParameterIndentation:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false

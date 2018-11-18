@@ -49,6 +49,7 @@ class CasesController < ApplicationController
       @agencies = SortCollectionOrdinally.call(collection: Agency.all)
       @categories = SortCollectionOrdinally.call(collection: Category.all)
       @states = SortCollectionOrdinally.call(collection: State.all)
+      @genders = SortCollectionOrdinally.call(collection: Gender.all, column_name: 'sex')
       render 'new'
     end
   end

@@ -1,0 +1,2 @@
+# Developing EBWiki with Vagrant
+
